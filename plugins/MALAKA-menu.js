@@ -6,7 +6,7 @@ const axios = require('axios')
 
 
 cmd({
-  pattern: "menu",
+  pattern: "soon",
   desc: "Commands panel",
   react: '📜',
   filename: __filename
@@ -256,18 +256,14 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 let status = `
-───────────────────
-_*⚙️ 𝙼𝙰𝙻𝙰𝙺𝙰 𝙱𝚈 𝙳𝙰𝚁𝙺-𝙰𝙻𝙵𝙷𝙰-𝙱𝙾𝚃 ⚙️*_
-───────────────────
-
 ┌────────────────
 │❖ *Uptime:*  ${runtime(process.uptime())}
 │❖ *Ram usage:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 │❖ *HostName:* ${os.hostname()}
-│❖ *Owner:* 𝘔𝘢𝘭𝘢𝘬𝘢 & 𝘋𝘈𝘙𝘒-𝘈𝘓𝘍𝘏𝘈-𝘔𝘋
+│❖ *Owner:* ᴍʀ ʜᴀꜱʜᴜᴜ ᴄᴏᴅᴇʀ
 └────────────────
 
-> 𝘔𝘢𝘭𝘢𝘬𝘢 ʙʏ 𝘋𝘈𝘙𝘒-𝘈𝘓𝘍𝘏𝘈-𝘔𝘋  
+> 𝐇𝐀𝐒𝐇𝐔-𝐌𝐃 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐁𝐔𝐆 𝐁𝐎𝐓 𝐕1 ⚜
 `
 return reply(`${status}`)
 
@@ -279,24 +275,33 @@ reply(`${e}`)
 })
 
 cmd({
-    pattern: "alive",
+    pattern: "menu",
     desc: "Check bot online or no.",
     category: "main",
-    react: "👋",
+    react: "⚜",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-let des = `*👋 Hello ${pushname} I'm alive now*
-*😉🇱🇰 I'm 𝗜 MALAKA-MD Whatsapp Bot* ✓
+let des = `*👋 Hello ${pushname} Hashu Bug Active Now ⚜*
 
-> *Version:* 8.0.0
-> *Ram usage:* 43.46MB / 15981MB
-> *Runtime:* 3 hours, 7 minutes, 35 seconds
-> *HostName:* fv-az984-882
+*😉🇱🇰 I'm 𝗜 HASHU-BUG-MD Whatsapp Bot* ✓
 
-*🪀 MALAKA-MD WHATSAPP BOT
+> *Version:* 1.0.0
+> *Ram usage:* 43.46GB / 15981MB
+> *Runtime:* ${runtime(process.uptime())}
+> *HostName:* Vps
+____________________________________________
+
+𝐍𝐎𝐖 𝐀𝐂𝐓𝐈𝐕𝐄 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 ⚜🤍
+
+.ʜᴀꜱʜᴜ-ɪɴᴠɪꜱ
+.ꜱʟᴏᴡ
+.ʙᴜɢ
+
+
+> *🪀 HASHU-BUG-MD WHATSAPP LAG BOT MR HASHUU 🙂🤍*
 
 `
 
