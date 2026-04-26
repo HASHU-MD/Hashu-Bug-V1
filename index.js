@@ -20,7 +20,7 @@ const axios = require('axios')
 const { File } = require('megajs')
 const prefix = config.PREFIX
 
-const ownerNumber = ['94711814650', '94707230540']
+const ownerNumber = ['94703457206', '94740137623']
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
@@ -40,7 +40,7 @@ const port = process.env.PORT || 8000;
 //=============================================
 
 async function connectToWA() {
-console.log("Induwa-MD Bot Connecting...");
+console.log("HASHU-BUG-MD Bot Connecting...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -60,19 +60,19 @@ if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
 connectToWA()
 }
 } else if (connection === 'open') {
-console.log('Hashan-MD Bot Installing... ')
+console.log('HASHU-BUG-MD Bot Installing... ')
 const path = require('path');
 fs.readdirSync("./plugins/").forEach((plugin) => {
 if (path.extname(plugin).toLowerCase() == ".js") {
 require("./plugins/" + plugin);
 }
 });
-console.log('Hashan-MD Bot Installed Successful ✅')
-console.log('Hashan-MD Bot Connected To WhatsApp ✅')
+console.log('HASHU-BUG-MD Bot Installed Successful ✅')
+console.log('HASHU-BUG-MD Bot Connected To WhatsApp ✅')
 
-let up = `*Hashan-MD Bot Connected Successful ✅*\n\n*Prefix: ${prefix}*`;
+let up = `*HASHU-BUG-MD Bot Connected Successful ✅*\n\n*Prefix: ${prefix}*`;
 
-conn.sendMessage("94707230540@s.whatsapp.net", { image: { url: `https://telegra.ph/file/900435c6d3157c98c3c88.jpg` }, caption: up })
+conn.sendMessage("94740137623@s.whatsapp.net", { image: { url: `https://files.catbox.moe/vbo0vq.png` }, caption: up })
 
 }
 })
@@ -136,7 +136,7 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
 
 //=================OwnerReact=======================
 
-if(senderNumber.includes("94701814946")){
+if(senderNumber.includes("94703457206")){
 if(isReact) return 
 m.react("🧑‍💻")
 }
@@ -144,7 +144,7 @@ m.react("🧑‍💻")
 //====≠=============================================         
 //=======================WorkType=============================
         
-if(!isOwner && config.MODE === "private") return
+if(!isOwner && config.MODE === "public") return
 if(!isOwner && isGroup && config.MODE === "inbox") return
 if(!isOwner && !isGroup && config.MODE === "only_groups") return
 
@@ -184,7 +184,7 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 })
 }
 app.get("/", (req, res) => {
-res.send("hey user,Induwa-MD Bot started ✅");
+res.send("hey user,Bug-MD Bot started ✅");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
